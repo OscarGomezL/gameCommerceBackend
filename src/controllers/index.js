@@ -4,5 +4,4 @@ module.exports = {
 	UserController: require('./user.controller'),
 	AuthController: require('./auth.controller'),
 	LinkController: require('./link.controller'),
-	WorkController: require('./work.controller'),
 }

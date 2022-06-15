@@ -4,5 +4,4 @@ module.exports = {
 	UserService: require('./user.service.js'),
 	AuthService: require('./auth.service.js'),
 	LinkService: require('./link.service.js'),
-	WorkService: require('./work.service.js'),
 }

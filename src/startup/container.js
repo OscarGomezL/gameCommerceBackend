@@ -4,11 +4,11 @@ const config = require('../config')
 const app = require('./app.js')
 const Routes = require('../routes')
 //services
-const {TestService, GameService, UserService, AuthService, LinkService, WorkService} = require('../services')
+const {TestService, GameService, UserService, AuthService, LinkService} = require('../services')
 //controllers
-const {TestController, GameController, UserController, AuthController, LinkController, WorkController} = require('../controllers')
+const {TestController, GameController, UserController, AuthController, LinkController} = require('../controllers')
 //routes
-const {TestRoute, GameRoutes, UserRoutes, LinkRoutes, WorkRoutes} = require('../routes/index.routes')
+const {TestRoute, GameRoutes, UserRoutes, LinkRoutes} = require('../routes/index.routes')
 //models
 const {UserModel, LinkModel} = require('../models')
 //repositories
@@ -23,7 +23,6 @@ container
 })
 .register({
 	TestService : asClass(TestService).singleton(),
-	WorkService : asClass(WorkService).singleton(),
 	GameService : asClass(GameService).singleton(),
 	UserService : asClass(UserService).singleton(),
 	AuthService : asClass(AuthService).singleton(),
@@ -31,7 +30,6 @@ container
 })
 .register({
 	TestController: asClass(TestController.bind(TestController)).singleton(),
-	WorkController: asClass(WorkController.bind(WorkController)).singleton(),
 	GameController: asClass(GameController.bind(GameController)).singleton(),
 	UserController: asClass(UserController.bind(UserController)).singleton(),
 	AuthController: asClass(AuthController.bind(AuthController)).singleton(),
@@ -39,7 +37,6 @@ container
 })
 .register({
 	TestRoute : asFunction(TestRoute).singleton(),
-	WorkRoutes : asFunction(WorkRoutes).singleton(),
 	GameRoutes : asFunction(GameRoutes).singleton(),
 	UserRoutes : asFunction(UserRoutes).singleton(),
 	LinkRoutes : asFunction(LinkRoutes).singleton(),
