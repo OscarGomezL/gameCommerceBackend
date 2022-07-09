@@ -8,6 +8,7 @@ const GameSchema = new Schema(
 		console: {type: String},
         description: {type:String},
 		price: {type: Number},
+        quantity: {type:Number},
         logo: {type:String},
     }, {timestamps: {createdAt:true, updatedAt: true}}
 );
