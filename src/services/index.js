@@ -4,4 +4,5 @@ module.exports = {
 	UserService: require('./user.service.js'),
 	AuthService: require('./auth.service.js'),
 	LinkService: require('./link.service.js'),
+	StripeService: require('./stripe.service.js'),
 }
