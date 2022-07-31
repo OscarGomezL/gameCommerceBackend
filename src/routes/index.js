@@ -6,7 +6,7 @@ const path = require('path')
 const {NotFoundMiddleware, ErrorMiddleware} = require('../middleware')
 
 require('express-async-errors')
-module.exports = function({TestRoute, GameRoutes, UserRoutes, LinkRoutes}) {
+module.exports = function({TestRoute, GameRoutes, UserRoutes, LinkRoutes, StripeRoutes}) {
 	const router = express.Router();
 	const apiRoutes = express.Router()
 	apiRoutes
@@ -21,6 +21,7 @@ module.exports = function({TestRoute, GameRoutes, UserRoutes, LinkRoutes}) {
 	apiRoutes.use("/games",GameRoutes)
 	apiRoutes.use("/user",UserRoutes)
 	apiRoutes.use("/link",LinkRoutes)
+	apiRoutes.use("/stripe",StripeRoutes)
 	router.use("/v1", apiRoutes)
 	router.use(NotFoundMiddleware)
 	router.use(ErrorMiddleware)

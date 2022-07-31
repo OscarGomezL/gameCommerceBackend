@@ -3,4 +3,5 @@ module.exports = {
 	GameRoutes: require('./game.routes'),
 	UserRoutes: require('./user.routes'),
 	LinkRoutes: require('./link.routes'),
+	StripeRoutes: require('./stripe.routes'),
 }
