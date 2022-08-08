@@ -56,8 +56,8 @@ class StripeController {
 						quantity: item.quantity,
 					} 
 				}),
-				success_url: 'http://localhost:3000/directions',
-				cancel_url: 'http://localhost:3000/cart',
+				success_url: 'http://game-commerce.vercel.app/',
+				cancel_url: 'http://game-commerce.vercel.app/',
 			})
 			res.status(201).send(_stripeService.createCheckoutSession({url: session.url}))
 		} catch (error) {
