@@ -7,6 +7,7 @@ const GameSchema = new Schema(
 		listNum: {type: Number},
 		console: {type: String},
         description: {type:String},
+        categories: {type : Array},
 		price: {type: Number},
         quantity: {type:Number},
         logo: {type:String},
