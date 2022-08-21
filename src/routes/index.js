@@ -15,6 +15,7 @@ module.exports = function({TestRoute, GameRoutes, UserRoutes, LinkRoutes, Stripe
 		.use('*/xbox360GamesImages', express.static(path.join(__dirname, '/../public/xbox')))
 		.use('*/wiiGamesImages', express.static(path.join(__dirname, '/../public/wii')))
 		.use('*/dsGamesImages', express.static(path.join(__dirname, '/../public/ds')))
+		.use('*/slidesImages', express.static(path.join(__dirname, '/../public/slides')))
 		.use(helmet())
 		.use(compression())
 	apiRoutes.use("/test",TestRoute)
